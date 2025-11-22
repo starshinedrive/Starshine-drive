@@ -1,0 +1,116 @@
+/* ----------- RESET ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ----------- BODY ----------- */
+body {
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ----------- HEADER ----------- */
+header {
+  width: 100%;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header img {
+  height: 60px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* ----------- HERO SECTION ----------- */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #0046ff, #0280ff);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 25px;
+  background: white;
+  color: #0046ff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #f1f1f1;
+}
+
+/* ----------- PRODUCT CARDS ----------- */
+.products {
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.8;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
