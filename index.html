@@ -1,416 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Starshine Drive — Precision Gearboxes & Power Transmission | Morbi, Gujarat</title>
-  <meta name="description" content="Starshine Drive (Morbi, Gujarat) — Manufacturer & supplier of premium gearboxes, gear motors, cycloidal drives, worm reducers and power transmission solutions across India." />
-  <meta name="keywords" content="gearbox manufacturer India, speed reducer Gujarat, helical gearbox Morbi, cycloidal drive, gear motor supplier" />
-  <meta property="og:title" content="Starshine Drive — Precision Gearboxes & Power Transmission" />
-  <meta property="og:description" content="Premium gearboxes, motors & transmission equipment — design, supply and after-sales support from Morbi, Gujarat." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://starshinedrive.com/" />
-  <meta property="og:image" content="https://starshinedrive.com/assets/og-image.jpg" />
-
-  <!-- Favicon (replace) -->
-  <link rel="icon" href="/assets/favicon.ico" />
-
-  <!-- Basic CSS - mobile-first -->
-  <style>
-    :root{
-      --accent:#0b5d6a;
-      --muted:#667085;
-      --bg:#f7f9fb;
-      --card:#ffffff;
-      --max-width:1100px;
-      --radius:10px;
-      --gap:18px;
-      font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
-      color: #102a43;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
-    .container{
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:22px;
-    }
-
-    /* Header */
-    header{
-      background:linear-gradient(180deg, #ffffff, #f2fbfd);
-      border-bottom:1px solid rgba(16,42,67,0.06);
-      position:sticky;
-      top:0;
-      z-index:30;
-      backdrop-filter:saturate(120%) blur(4px);
-    }
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-    .brand img{height:44px;width:44px;object-fit:contain;border-radius:8px}
-    .brand h1{font-size:18px;margin:0}
-    nav{display:flex;gap:14px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
-    nav a:hover{background:rgba(11,93,106,0.06);color:var(--accent)}
-
-    /* Hero */
-    .hero{
-      background:linear-gradient(90deg, rgba(11,93,106,0.04), rgba(11,93,106,0.02));
-      padding:28px;
-      margin-top:18px;
-      border-radius:var(--radius);
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-    }
-    .hero-flex{display:flex;flex-direction:column;gap:12px}
-    .eyebrow{font-weight:700;color:var(--accent);font-size:13px}
-    .headline{font-size:28px;margin:0;line-height:1.05}
-    .sub{color:var(--muted);margin:0}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-ghost{background:transparent;border:1px solid rgba(16,42,67,0.06);color:var(--muted)}
-
-    /* Grid sections */
-    .grid-2{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
-    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,42,67,0.04);}
-
-    /* Products preview */
-    .products{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
-    .product-item{display:flex;gap:12px;align-items:center}
-    .product-item img{height:72px;width:110px;object-fit:cover;border-radius:8px}
-
-    /* Industries */
-    .chips{display:flex;flex-wrap:wrap;gap:10px}
-    .chip{background:#fff;border-radius:999px;padding:8px 12px;font-weight:600;border:1px solid rgba(16,42,67,0.06)}
-
-    /* Two-column layout */
-    .two-col{display:grid;grid-template-columns:1fr;gap:18px}
-    .specs-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-
-    /* Footer */
-    footer{margin-top:28px;padding:28px 0;color:var(--muted);font-size:14px}
-    .footer-row{display:flex;flex-direction:column;gap:12px}
-    .socials{display:flex;gap:10px}
-
-    /* Contact form */
-    form{display:grid;gap:10px}
-    label{font-weight:700;font-size:13px;color:#102a43}
-    input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(16,42,67,0.08);font-size:14px}
-    textarea{min-height:110px;resize:vertical}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .muted{color:var(--muted);font-size:13px}
-
-    /* Utilities */
-    .text-sm{font-size:13px;color:var(--muted)}
-    .center{display:flex;align-items:center;justify-content:center}
-
-    /* Responsive rules */
-    @media(min-width:760px){
-      .hero{grid-template-columns:1fr 420px;align-items:center}
-      .grid-2{grid-template-columns:1fr 360px}
-      .products{grid-template-columns:repeat(2,1fr)}
-      .two-col{grid-template-columns:1fr 1fr}
-      .product-item img{height:88px;width:140px}
-    }
-
-    @media(min-width:1100px){
-      .container{padding:28px}
-      .headline{font-size:36px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starshine Drive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Starshine Drive Home">
-        <img src="/assets/logo-placeholder.png" alt="Starshine Drive logo — replace with real logo" />
-        <div>
-          <h1>Starshine Drive</h1>
-          <div class="text-sm">Precision Gearboxes & Power Transmission</div>
-        </div>
-      </a>
 
-      <nav aria-label="Primary navigation">
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container" id="top">
-    <!-- HERO -->
-    <section class="hero" role="region" aria-label="Hero section">
-      <div class="hero-flex">
-        <div class="eyebrow">Made in India — Morbi, Gujarat</div>
-        <h2 class="headline">Precision Gearboxes. Trusted Performance.</h2>
-        <p class="sub">Manufacturer and supplier of premium gearboxes, gear motors, cycloidal drives and speed reducers. Design support, fast delivery and dependable after-sales service.</p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#products">Explore Products</a>
-          <a class="btn btn-ghost" href="/assets/Starshine_Catalogue.pdf" download>Download Catalogue</a>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="your-logo.png" alt="Logo"> <!-- Replace with your logo -->
         </div>
 
-        <div style="margin-top:12px" class="muted">Phone: <strong>+91 99250 01313</strong> · Email: <strong>info@starshinedrive.com</strong></div>
-      </div>
-
-      <div class="card center" aria-hidden="false">
-        <!-- Replace this with a high-quality hero image of gearboxes or workshop -->
-        <img src="/assets/hero-gearbox.jpg" alt="Industrial gearbox and transmission systems — Starshine Drive" style="max-width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(16,42,67,0.06)" />
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE -->
-    <section class="grid-2">
-      <div class="card">
-        <h3>Why Choose Starshine Drive?</h3>
-        <ul>
-          <li><strong>Premium Quality</strong> — Imported components & precision assembly.</li>
-          <li><strong>Wide Range</strong> — Helical, worm, cycloidal, planetary, variators & motors.</li>
-          <li><strong>Technical Support</strong> — Selection & installation guidance from experienced engineers.</li>
-          <li><strong>After-Sales</strong> — Spare parts and maintenance support.</li>
-        </ul>
-        <p class="text-sm">We serve ceramics, packaging, logistics, food-processing, textile and automation industries across India.</p>
-      </div>
-
-      <aside class="card">
-        <h4>Quick Links</h4>
-        <div class="chips">
-          <div class="chip">Download Catalogue</div>
-          <div class="chip">Request Quotation</div>
-          <div class="chip">Custom Solutions</div>
-          <div class="chip">Technical Datasheets</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
         </div>
-        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(16,42,67,0.06)"/>
-        <h4>Certifications</h4>
-        <p class="text-sm">ISO & quality management processes — contact us to request certificates and test reports.</p>
-      </aside>
-    </section>
 
-    <!-- PRODUCTS -->
-    <section id="products" style="margin-top:18px">
-      <div class="card">
-        <h3>Featured Products</h3>
-        <div class="products" role="list">
-          <article class="product-item" role="listitem">
-            <img src="/assets/product-helical.jpg" alt="R Series Helical Gearbox" />
-            <div>
-              <h4>Helical Gearboxes (R / F / K Series)</h4>
-              <p class="text-sm">High efficiency, compact design. Power 0.18–160 kW. Ratios up to 18000.</p>
-              <a href="#product-template" class="btn btn-ghost">View details</a>
-            </div>
-          </article>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-          <article class="product-item" role="listitem">
-            <img src="/assets/product-worm.jpg" alt="NMRV Worm Gearbox" />
-            <div>
-              <h4>Worm Gearboxes (NMRV)</h4>
-              <p class="text-sm">Compact, silent, economical — ideal for conveyors and packaging equipment.</p>
-              <a href="#product-template" class="btn btn-ghost">View details</a>
-            </div>
-          </article>
+    <!-- CATEGORY SLIDER -->
+    <section class="category-section">
+        <h2>Shop by Category</h2>
 
-          <article class="product-item" role="listitem">
-            <img src="/assets/product-cycloid.jpg" alt="Cycloidal gearbox" />
-            <div>
-              <h4>Cycloidal Drives (B Series)</h4>
-              <p class="text-sm">High reduction ratio and shock resistance for heavy-duty applications.</p>
-              <a href="#product-template" class="btn btn-ghost">View details</a>
+        <div class="categories">
+            <div class="category-card">
+                <img src="images/category1.jpg" alt="Category 1"> <!-- Replace -->
+                <p>Electronics</p>
             </div>
-          </article>
 
-          <article class="product-item" role="listitem">
-            <img src="/assets/product-variator.jpg" alt="Speed variator" />
-            <div>
-              <h4>Speed Variators (JWB Series)</h4>
-              <p class="text-sm">Stepless mechanical speed control solutions for process equipment.</p>
-              <a href="#product-template" class="btn btn-ghost">View details</a>
+            <div class="category-card">
+                <img src="images/category2.jpg" alt="Category 2"> <!-- Replace -->
+                <p>Home Appliances</p>
             </div>
-          </article>
+
+            <div class="category-card">
+                <img src="images/category3.jpg" alt="Category 3"> <!-- Replace -->
+                <p>Accessories</p>
+            </div>
+
+            <div class="category-card">
+                <img src="images/category4.jpg" alt="Category 4"> <!-- Replace -->
+                <p>Auto Parts</p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- PRODUCT TEMPLATE (ANCHOR) -->
-    <section id="product-template" class="card" style="margin-top:18px">
-      <h3>Product — R Series Helical Gearbox</h3>
-      <div class="two-col">
-        <div>
-          <img src="/assets/product-helical-large.jpg" alt="R Series Helical Gearbox large" style="max-width:100%;border-radius:8px" />
+    <!-- PRODUCT GRID -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/product1.jpg" alt="Product 1"> <!-- Replace -->
+                <h3>Product Name 1</h3>
+                <p>₹799</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product2.jpg" alt="Product 2"> <!-- Replace -->
+                <h3>Product Name 2</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product3.jpg" alt="Product 3"> <!-- Replace -->
+                <h3>Product Name 3</h3>
+                <p>₹1299</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product4.jpg" alt="Product 4"> <!-- Replace -->
+                <h3>Product Name 4</h3>
+                <p>₹1499</p>
+                <button>Add to Cart</button>
+            </div>
+
         </div>
-        <div>
-          <h4>Overview</h4>
-          <p class="text-sm">A high-efficiency gearing solution designed for heavy-duty industrial applications. Smooth running, high torque, and low noise.</p>
-
-          <h4>Key Features</h4>
-          <ul>
-            <li>Efficiency up to 96%</li>
-            <li>High-strength alloy steel gears</li>
-            <li>Multiple mounting positions</li>
-            <li>Low vibration and long service life</li>
-          </ul>
-
-          <h4>Technical Specifications</h4>
-          <div class="specs-list text-sm">
-            <div>Power Range: 0.18 kW – 160 kW</div>
-            <div>Ratio Range: 3.21 – 18,000</div>
-            <div>Output Torque: Up to 18,000 Nm</div>
-            <div>Mounting: B3 / B5 / Custom</div>
-          </div>
-
-          <div style="margin-top:12px">
-            <a class="btn btn-primary" href="/assets/R-Series-Datasheet.pdf" download>Download Datasheet</a>
-            <a class="btn btn-ghost" href="#contact">Request Quotation</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="card" style="margin-top:18px">
-      <h3>Services</h3>
-      <ul>
-        <li><strong>Gearbox Selection Support</strong> — load & speed calculation, installation guidance.</li>
-        <li><strong>Custom Solutions</strong> — special ratios, shaft options, motor combinations.</li>
-        <li><strong>After-Sales Support</strong> — spare parts, maintenance guidance and troubleshooting.</li>
-        <li><strong>Fast Delivery</strong> — stocked items ready for dispatch across India.</li>
-      </ul>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="card" style="margin-top:18px">
-      <h3>About Starshine Drive (India)</h3>
-      <p class="text-sm">Located in Morbi, Gujarat, Starshine Drive combines imported high-quality components with precise assembly and engineering expertise. Our mission is to deliver reliable, cost-effective power transmission solutions to Indian industries with strong after-sales service and rapid delivery.</p>
-
-      <h4>Vision & Mission</h4>
-      <p class="text-sm"><strong>Vision:</strong> To be India’s most trusted provider of precision gearbox and motion-control solutions. <strong>Mission:</strong> Provide durable, high-performing systems and expert support to our customers.</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card" style="margin-top:18px">
-      <h3>Contact Us</h3>
-      <div style="display:grid;gap:12px">
-        <div class="muted">Starshine Drive — Morbi, Gujarat, India</div>
-        <div class="muted">Phone: <strong>+91 99250 01313</strong> · Email: <strong>info@starshinedrive.com</strong></div>
-
-        <!-- Contact form: replace action with your server-side endpoint (e.g., /api/contact) -->
-        <form id="contactForm" onsubmit="return submitContact(event)" aria-label="Contact form">
-          <div class="form-row">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required placeholder="Your full name" />
-            </div>
-            <div>
-              <label for="company">Company</label>
-              <input id="company" name="company" type="text" placeholder="Company / Organisation" />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" required placeholder="+91 98xxxxxx" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="name@company.com" />
-            </div>
-          </div>
-
-          <div>
-            <label for="message">Requirements</label>
-            <textarea id="message" name="message" placeholder="Briefly describe your requirement" required></textarea>
-          </div>
-
-          <div style="display:flex;gap:10px;align-items:center">
-            <button class="btn btn-primary" type="submit">Send Message</button>
-            <div id="formStatus" class="text-sm muted" aria-live="polite"></div>
-          </div>
-        </form>
-      </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <div class="container footer-row">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-          <div>
-            <strong>Starshine Drive</strong><br/>
-            Morbi, Gujarat · Phone: +91 99250 01313 · info@starshinedrive.com
-          </div>
-          <div class="socials">
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://wa.me/919925001313" aria-label="WhatsApp">WhatsApp</a>
-          </div>
-        </div>
-
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-          <div class="text-sm">© <span id="yr"></span> Starshine Drive. All Rights Reserved.</div>
-          <div class="text-sm">Site by Starshine Drive — Contact for trade enquiries and technical support.</div>
-        </div>
-      </div>
+        <p>© 2025 Starshine Drive. All Rights Reserved.</p>
     </footer>
-  </main>
 
-  <script>
-    // Set year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Simple front-end form handler.
-    // Replace `fetch` URL with your server endpoint (e.g., /api/contact) that emails or stores leads.
-    async function submitContact(e){
-      e.preventDefault();
-      const statusEl = document.getElementById('formStatus');
-      statusEl.textContent = 'Sending...';
-
-      const payload = {
-        name: document.getElementById('name').value.trim(),
-        company: document.getElementById('company').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        message: document.getElementById('message').value.trim()
-      };
-
-      // Basic validation
-      if(!payload.name || !payload.phone || !payload.email || !payload.message){
-        statusEl.textContent = 'Please fill all required fields.';
-        return false;
-      }
-
-      try{
-        // TODO: change URL to your server endpoint
-        const resp = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {'Content-Type':'application/json'},
-          body: JSON.stringify(payload)
-        });
-
-        if(resp.ok){
-          statusEl.textContent = 'Message sent — we will contact you within 1 business day.';
-          document.getElementById('contactForm').reset();
-        } else {
-          const text = await resp.text();
-          statusEl.textContent = 'Server error: ' + (text || resp.status);
-        }
-      } catch(err){
-        // If you do not have a backend yet, you can use an email service or Zapier webhook URL here.
-        statusEl.textContent = 'Unable to send — replace /api/contact with your server endpoint or webhook.';
-        console.error(err);
-      }
-      return false;
-    }
-    src="script.js"
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
